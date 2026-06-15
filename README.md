@@ -67,7 +67,7 @@ Just open `index.html` in any modern browser — no build step, no server needed
 Currently uses browser-side SQLite. For production with 1,000+ daily visitors, work in progress to replace `js/db.js` with API calls to:
 
 | Option | Type 
-|---|---|---|
+|---|---|
 | [Supabase](https://supabase.com) | Postgres |
 | [PlanetScale](https://planetscale.com) | MySQL |
 | [Firebase](https://firebase.google.com) | NoSQL |
