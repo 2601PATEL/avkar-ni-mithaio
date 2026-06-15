@@ -64,12 +64,12 @@ Just open `index.html` in any modern browser — no build step, no server needed
 
 ## Upgrading to a Real Backend
 
-Currently uses browser-side SQLite. For production with 1,000+ daily visitors, replace `js/db.js` with API calls to:
+Currently uses browser-side SQLite. For production with 1,000+ daily visitors, work in progress to replace `js/db.js` with API calls to:
 
-| Option | Type | Free Tier |
+| Option | Type 
 |---|---|---|
-| [Supabase](https://supabase.com) | Postgres | ✅ Yes |
-| [PlanetScale](https://planetscale.com) | MySQL | ✅ Yes |
-| [Firebase](https://firebase.google.com) | NoSQL | ✅ Yes |
+| [Supabase](https://supabase.com) | Postgres |
+| [PlanetScale](https://planetscale.com) | MySQL |
+| [Firebase](https://firebase.google.com) | NoSQL |
 
 The rest of the JS files call `query()` and `saveDB()` — swap those two functions and everything else stays the same.
