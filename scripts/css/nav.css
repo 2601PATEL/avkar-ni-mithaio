@@ -1,0 +1,91 @@
+/* ── NAVIGATION ─────────────────────────────────────────────────────────────── */
+nav {
+  background: var(--espresso);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+.nav-brand svg { width: 36px; height: 36px; }
+
+.nav-brand-text { color: var(--ivory); }
+.nav-brand-text .brand-guj {
+  font-family: 'Noto Sans Gujarati', sans-serif;
+  font-size: 0.7rem;
+  color: var(--marigold);
+  letter-spacing: 0.05em;
+  display: block;
+}
+.nav-brand-text .brand-en {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.nav-btn {
+  background: none;
+  border: 1.5px solid transparent;
+  color: var(--cream);
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.nav-btn:hover  { border-color: var(--marigold); color: var(--marigold); }
+.nav-btn.active { background: var(--saffron); color: white; border-color: var(--saffron); }
+
+.cart-btn {
+  background: var(--marigold);
+  color: var(--espresso);
+  border: none;
+  padding: 7px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s;
+  font-family: 'Inter', sans-serif;
+}
+.cart-btn:hover { background: #e09610; }
+
+.cart-count {
+  background: var(--saffron);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  nav { padding: 0 1rem; }
+}
