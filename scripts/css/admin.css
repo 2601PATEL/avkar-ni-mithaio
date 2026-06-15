@@ -1,0 +1,208 @@
+/* ── ADMIN LAYOUT ────────────────────────────────────────────────────────────── */
+.admin-page { background: #f5f0e8; min-height: calc(100vh - 64px); }
+
+.admin-header {
+  background: var(--espresso);
+  color: var(--ivory);
+  padding: 1.5rem 2rem;
+}
+.admin-header h1 { font-size: 1.5rem; }
+.admin-header p  { font-size: 0.85rem; color: #c8b49a; margin-top: 4px; }
+
+.admin-body {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ── STATS ROW ───────────────────────────────────────────────────────────────── */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.stat-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  border-top: 3px solid var(--marigold);
+}
+.stat-card.red   { border-top-color: var(--saffron); }
+.stat-card.green { border-top-color: var(--sage); }
+.stat-card.rose  { border-top-color: var(--rose); }
+
+.stat-num {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--espresso);
+  font-family: 'Playfair Display', serif;
+}
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+}
+
+/* ── TABS ────────────────────────────────────────────────────────────────────── */
+.admin-tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--border);
+  border-radius: 8px;
+  padding: 4px;
+  margin-bottom: 1.5rem;
+  width: fit-content;
+}
+.tab-btn {
+  padding: 8px 18px;
+  border: none;
+  background: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--muted);
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s;
+}
+.tab-btn.active {
+  background: white;
+  color: var(--espresso);
+  font-weight: 600;
+  box-shadow: var(--shadow);
+}
+
+/* ── ORDERS LIST ─────────────────────────────────────────────────────────────── */
+.orders-list { display: flex; flex-direction: column; gap: 12px; }
+
+.order-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: start;
+}
+.order-id {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.order-customer { font-weight: 700; font-size: 1rem; color: var(--espresso); margin-top: 2px; }
+.order-phone    { font-size: 0.82rem; color: var(--muted); }
+.order-items-list { margin-top: 8px; font-size: 0.82rem; color: var(--text); }
+.order-dates    { display: flex; gap: 16px; margin-top: 8px; font-size: 0.78rem; color: var(--muted); }
+.order-total    { font-weight: 700; color: var(--saffron); font-size: 1rem; margin-top: 4px; }
+.order-note     { font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
+.order-urgent   { color: var(--saffron); font-size: 0.75rem; font-weight: 700; }
+
+.order-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+/* ── STATUS BADGES ───────────────────────────────────────────────────────────── */
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.status-pending   { background: #FEF3C7; color: #92400E; }
+.status-accepted  { background: #D1FAE5; color: #065F46; }
+.status-completed { background: #E0E7FF; color: #3730A3; }
+.status-cancelled { background: #FEE2E2; color: #991B1B; }
+
+/* ── ORDER ACTION BUTTONS ────────────────────────────────────────────────────── */
+.accept-btn {
+  background: var(--sage);
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.2s;
+}
+.accept-btn:hover { background: #5d8061; }
+
+.complete-btn {
+  background: #6366F1;
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+.cancel-btn {
+  background: none;
+  border: 1px solid var(--rose);
+  color: var(--rose);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── REMINDERS ───────────────────────────────────────────────────────────────── */
+.reminders-info {
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.reminders-list { display: flex; flex-direction: column; gap: 10px; }
+
+.reminder-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--marigold);
+}
+.reminder-card.urgent {
+  border-left-color: var(--saffron);
+  background: #FFF7ED;
+}
+.reminder-title  { font-weight: 700; color: var(--espresso); }
+.reminder-detail { font-size: 0.82rem; color: var(--muted); margin-top: 4px; }
+.reminder-badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: var(--marigold);
+  color: var(--espresso);
+}
+.reminder-badge.urgent { background: var(--saffron); color: white; }
+
+/* ── EMPTY STATE ─────────────────────────────────────────────────────────────── */
+.empty-state { text-align: center; padding: 3rem; color: var(--muted); }
+.empty-state .icon { font-size: 3rem; display: block; margin-bottom: 1rem; }
+
+@media (max-width: 600px) {
+  .order-card { grid-template-columns: 1fr; }
+  .order-actions { flex-direction: row; align-items: center; }
+  .admin-body { padding: 1rem; }
+}
