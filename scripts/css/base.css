@@ -1,0 +1,140 @@
+/* ── DESIGN TOKENS ──────────────────────────────────────────────────────────── */
+:root {
+  --saffron:  #E8521A;
+  --marigold: #F5A623;
+  --ivory:    #FDF6EC;
+  --cream:    #F7EDD8;
+  --espresso: #2C1A0E;
+  --rose:     #C9887A;
+  --sage:     #7A9E7E;
+  --border:   #E8D8C0;
+  --text:     #3D2010;
+  --muted:    #8B6B50;
+  --white:    #FFFFFF;
+  --shadow:    0 2px 12px rgba(44,26,14,0.10);
+  --shadow-lg: 0 8px 32px rgba(44,26,14,0.14);
+}
+
+/* ── RESET ──────────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--ivory);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* ── PAGES ──────────────────────────────────────────────────────────────────── */
+.page         { display: none; }
+.page.active  { display: block; }
+
+/* ── SHARED SECTION WRAPPER ─────────────────────────────────────────────────── */
+.section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 2rem;
+}
+
+.section-title { font-size: 1.7rem; color: var(--espresso); }
+.section-line  { flex: 1; height: 1px; background: var(--border); }
+.section-sub   { color: var(--muted); font-size: 0.85rem; }
+
+/* ── SHARED BUTTONS ─────────────────────────────────────────────────────────── */
+.btn-primary {
+  background: var(--saffron);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s;
+}
+.btn-primary:hover {
+  background: #c4420f;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--marigold);
+  border: 1.5px solid var(--marigold);
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s;
+}
+.btn-outline:hover {
+  background: var(--marigold);
+  color: var(--espresso);
+}
+
+.btn-secondary {
+  background: var(--cream);
+  color: var(--espresso);
+  border: 1.5px solid var(--border);
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── TOAST ──────────────────────────────────────────────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--espresso);
+  color: var(--ivory);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  z-index: 999;
+  transform: translateY(80px);
+  opacity: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+  border-left: 4px solid var(--marigold);
+}
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ── FOOTER ─────────────────────────────────────────────────────────────────── */
+footer {
+  background: var(--espresso);
+  color: #c8b49a;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.8rem;
+  margin-top: 3rem;
+}
+footer span { color: var(--marigold); }
+
+/* ── RESPONSIVE ─────────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .section { padding: 2rem 1rem; }
+}
