@@ -62,7 +62,7 @@ Just open `index.html` in any modern browser — no build step, no server needed
 
 ---
 
-## Upgrading to a Real Backend
+## Upgrading to an actual DB (cheap option used right now)
 
 Currently uses browser-side SQLite. For production with 1,000+ daily visitors, work in progress to replace `js/db.js` with API calls to:
 
@@ -72,4 +72,4 @@ Currently uses browser-side SQLite. For production with 1,000+ daily visitors, w
 | [PlanetScale](https://planetscale.com) | MySQL |
 | [Firebase](https://firebase.google.com) | NoSQL |
 
-The rest of the JS files call `query()` and `saveDB()` — swap those two functions and everything else stays the same.
+The rest of the JS files call `query()` and `saveDB()` — will swap those two functions and everything else stays the same.
